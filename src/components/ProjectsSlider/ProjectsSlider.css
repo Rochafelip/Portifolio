@@ -1,0 +1,61 @@
+.projects-slider-section {
+  background-color: #1c1c1c;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.projects-slider-section .container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.project-card {
+  background-color: #2b2b2b;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 430px;
+  max-height: 430px;
+  text-align: justify;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.project-image img {
+  max-height: 150px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+}
+
+.swiper-pagination-bullet {
+  background-color: #aaa;
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+  opacity: 1;
+}
+
+@media (max-width: 576px) {
+  .project-card {
+    min-height: 350px;
+    max-height: 350px;
+    padding: 1rem;
+  }
+
+  .project-image img {
+    max-height: 120px;
+  }
+}
