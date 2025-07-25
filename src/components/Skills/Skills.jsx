@@ -27,13 +27,13 @@ const devopsSkills = [
 ];
 
 const renderSkillsColumn = (title, skills) => (
-  <div className="col-12 col-md-4 mb-4">
-    <h4 className="text-light text-center mb-3">{title}</h4>
+  <div className="SkillsColumn col-12 col-md-4 mb-4">
+    <h4 className="text-light text-center mb-4">{title}</h4>
     <div className="skills-box">
       {skills.map((skill, index) => (
         <div key={index} className="text-center skill-item">
           <i className={`${skill.icon} skill-icon`}></i>
-          <p className="mb-0 text-light">{skill.name}</p>
+          <p className="text-light">{skill.name}</p>
         </div>
       ))}
     </div>
@@ -42,13 +42,13 @@ const renderSkillsColumn = (title, skills) => (
 
 const Skills = () => {
   return (
-    <section className="skills-section py-5" id="habilidades">
-      <h2 className="text-center mb-5 text-light">Habilidades Técnicas</h2>
+    <section className="skills-section py-2" id="habilidades">
+      <h2 className="TextHabilidades text-center mb-2">Habilidades Técnicas</h2>
       <div className="container">        
         <div className="row skills-wrapper">
           {renderSkillsColumn('Frontend', frontendSkills)}
           {renderSkillsColumn('Backend', backendSkills)}
-          {renderSkillsColumn('Banco de Dados & DevOps', devopsSkills)}
+          {renderSkillsColumn('Banco de Dados', devopsSkills)}
         </div>
       </div>
     </section>

@@ -3,21 +3,20 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;  
-  color: white;
   position: relative;
 }
 
 .logo {
   margin: 0;
   font-weight: bold;
-  color: white;
+  color: #a6dac9;
   font-size: 1.40rem;
 }
 
 .menu-toggle {
   display: none;
   background: none;
-  border: none;
+  border: none;  
   cursor: pointer;
 }
 
@@ -52,7 +51,7 @@
 }
 
 .nav-links a {
-  color: white;
+  color: #a6dac9;
   text-decoration: none;
   padding: 0.25rem 0.5rem;
   transition: color 0.2s ease;

@@ -8,7 +8,7 @@
   text-align: center;
 }
 .contact-section-title{
-    color: #00CED1;
+  color: #00fecb;
 }
 
 .contact-section .container {
@@ -30,5 +30,5 @@
 }
 
 .contact-section .btn-light:hover {
-  background-color: #00efc8;
+  background-color: #00fecb;
 }

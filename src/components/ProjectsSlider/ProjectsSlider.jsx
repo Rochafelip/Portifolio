@@ -38,7 +38,7 @@ useEffect(() => {
         >
           {repos.map((repo) => (
             <SwiperSlide key={repo.id}>
-              <div className="project-card rounded shadow-sm p-2 d-flex flex-column justify-content-between h-100">
+              <div className="project-card rounded shadow-sm p-4 d-flex flex-column justify-content-between h-100">
                 <div className="flex-grow-1">
                   <div className="project-image mb-4">
                     <img
