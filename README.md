@@ -39,7 +39,7 @@ Quer conversar sobre tecnologia, projetos ou colaboração?
 - ✉️ Email: rocha.felipe98@gmail.com  
 - 💼 LinkedIn: [linkedin.com/in/feliperochafrs](https://www.linkedin.com/in/feliperochafrs/)  
 - 🧑‍💻 GitHub: [github.com/Rochafelip](https://github.com/Rochafelip)  
-- 📱 WhatsApp: [Clique para conversar](https://wa.me/81997524801)
+- 📱 WhatsApp: [Clique para conversar](https://wa.me/(81)997524801)
 
 ---
 
