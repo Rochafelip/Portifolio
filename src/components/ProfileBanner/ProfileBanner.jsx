@@ -49,10 +49,15 @@ const ProfileBanner = () => {
                 <i className="bi bi-envelope"></i>
               </a>
             </div>
-
-            <a href="#contato" className="btn btn-contato">
-              Fale comigo
-            </a>
+            <div>
+            <button
+              className="btn btn-contato"
+              onClick={() => {
+                document.getElementById("contato")?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >Fale comigo              
+            </button>
+            </div>
           </div>
         </div>
       </div>
