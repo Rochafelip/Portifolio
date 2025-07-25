@@ -3,6 +3,7 @@ import { fetchGitHubRepos } from '../../utils/fetchGitHubRepos';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -11,13 +12,13 @@ import './ProjectsSlider.css';
 const ProjectsSlider = ({ username }) => {
   const [repos, setRepos] = useState([]);
 
-  useEffect(() => {
-    const load = async () => {
-      const result = await fetchGitHubRepos(username);
-      setRepos(result);
-    };
-    load();
-  }, [username]);
+useEffect(() => {
+  const load = async () => {
+    const result = await fetchGitHubRepos(username);
+    setRepos(result);
+  };
+  load();
+}, [username]);
 
   return (
     <section id="projetos" className="projects-slider-section my-1">
@@ -61,7 +62,7 @@ const ProjectsSlider = ({ username }) => {
                     rel="noreferrer"
                     className="py-2 px-3 btn btn-sm btn-outline-light w-70"
                   >
-                    Ver no GitHub
+                    Ver Projeto
                   </a>
                   <a
                     href={repo.html_url}
