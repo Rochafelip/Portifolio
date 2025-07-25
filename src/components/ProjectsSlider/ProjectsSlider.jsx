@@ -22,7 +22,7 @@ const ProjectsSlider = ({ username }) => {
   return (
     <section id="projetos" className="projects-slider-section my-1">
       <div className="container py-2 px-2">
-        <h2 className="text-center mb-5 text-light">Projetos no GitHub</h2>
+        <h2 className="TextContainer text-center mb-2">Projetos no GitHub</h2>
 
         <Swiper
           modules={[Navigation, Pagination]}
@@ -51,15 +51,23 @@ const ProjectsSlider = ({ username }) => {
                     {repo.description || 'Sem descrição.'}
                   </p>
                   <p className="text-light small">
-                    Linguagens: {repo.languages || 'Não definidas'}
+                    {repo.languages || 'Não definidas'}
                   </p>
                 </div>
-                <div className="mb-2">
+                <div className="mb-0 d-flex justify-content-between align-items-center">
                   <a
                     href={repo.html_url}
                     target="_blank"
                     rel="noreferrer"
-                    className="btn btn-sm btn-outline-light w-100"
+                    className="py-2 px-3 btn btn-sm btn-outline-light w-70"
+                  >
+                    Ver no GitHub
+                  </a>
+                  <a
+                    href={repo.html_url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="py-2 px-3 btn btn-sm btn-outline-light w-70"
                   >
                     Ver no GitHub
                   </a>
