@@ -27,7 +27,7 @@ Sou desenvolvedor Full Stack com foco em **Ruby on Rails** no backend e **React.
 
 ## 📁 Projetos em destaque
 
-Explore os projetos aqui no repositório ou pelo meu site [👉 Portifolio Felipe]([https://feliperocha.dev](https://rochafelip.github.io/Portifolio/)]
+Explore os projetos aqui no repositório ou pelo meu site [👉 Portifolio Felipe: ]([Portifolio](https://rochafelip.github.io/Portifolio/)]
 Todos com código limpo, responsividade e boas práticas.
 
 ---
