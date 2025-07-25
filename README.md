@@ -1,12 +1,46 @@
-# React + Vite
+# 👨‍💻 Felipe Rocha - Desenvolvedor Full Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao meu portfólio! 🚀  
+Sou desenvolvedor Full Stack com foco em **Ruby on Rails** no backend e **React.js** no frontend. Construo soluções modernas, eficientes e centradas no usuário.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Sobre mim
 
-## Expanding the ESLint configuration
+🎓 Formado em Ciência da Computação  
+💼 Experiência com sistemas corporativos, APIs RESTful, testes automatizados, Git e PostgreSQL  
+🛠️ Também tenho vivência com Oracle APEX, PL/SQL, Node.js e Vue.js em projetos pessoais  
+📊 Gosto de métricas, performance, código limpo e soluções que realmente ajudam pessoas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧰 Tecnologias e Ferramentas
+
+- **Back-end:** Ruby on Rails, Node.js, PL/SQL  
+- **Front-end:** React.js, Vue.js, HTML, CSS, Bootstrap  
+- **Banco de Dados:** PostgreSQL, Oracle  
+- **Testes:** RSpec, FactoryBot  
+- **CI/CD:** GitHub Actions, Bitbucket Pipelines  
+- **Outros:** Docker, Redis, Sidekiq, JWT, AWS S3
+
+---
+
+## 📁 Projetos em destaque
+
+Explore os projetos aqui no repositório ou pelo meu site [👉 feliperocha.dev](https://feliperocha.dev)  
+Todos com código limpo, responsividade e boas práticas.
+
+---
+
+## 📬 Contato
+
+Quer conversar sobre tecnologia, projetos ou colaboração?
+
+- ✉️ Email: rocha.felipe98@gmail.com  
+- 💼 LinkedIn: [linkedin.com/in/feliperochafrs](https://www.linkedin.com/in/feliperochafrs/)  
+- 🧑‍💻 GitHub: [github.com/Rochafelip](https://github.com/Rochafelip)  
+- 📱 WhatsApp: [Clique para conversar](https://wa.me/SEUNUMEROAQUI)
+
+---
+
+Obrigado por visitar meu portfólio! 😄  
