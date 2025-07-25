@@ -30,11 +30,9 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: justify;
-  min-height: 470px;
-  max-height: 470px;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
+  min-height: 480px;
+  max-height: 480px;
+  border-radius: 20px;
 }
 
 .project-card:hover {
@@ -64,7 +62,6 @@
   opacity: 1;
 }
 
-/* Breakpoint: Tablets e abaixo */
 @media (max-width: 992px) {
   .TextContainer {
     font-size: 2rem;
@@ -75,11 +72,10 @@
   }
 
   .project-image img {
-    max-height: 130px;
+    max-height: 150px;
   }
 }
 
-/* Breakpoint: Celulares médios */
 @media (max-width: 768px) {
   .TextContainer {
     font-size: 1.8rem;
@@ -109,3 +105,4 @@
     font-size: 1.6rem;
   }
 }
+

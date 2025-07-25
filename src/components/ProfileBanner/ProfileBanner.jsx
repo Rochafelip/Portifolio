@@ -5,7 +5,7 @@ const ProfileBanner = () => {
   return (
     <section id="sobre">
       <div className="container">
-        <div className="row align-items-center justify-content-center banner-rounded text-light">
+        <div className="row align-items-center justify-content-center">
           
           <div className="col-md-4 text-center mb-4 mb-md-0">
             <img
@@ -17,10 +17,10 @@ const ProfileBanner = () => {
           </div>
 
           <div className="col-md-6 text-center text-md-start">
-            <h2 className="typing mb-2">Olá, sou o Felipe Rocha</h2>
+            <h2 className="typing">Olá, sou o Felipe Rocha</h2>
             <p className="lead mb-3">Desenvolvedor Full Stack | Ruby on Rails & React</p>
 
-            <div className="d-flex justify-content-center justify-content-md-start gap-3">
+            <div className="d-flex justify-content-center justify-content-md-start gap-3 mb-3">
               <a
                 href="https://github.com/Rochafelip"
                 className="social-icon-rounded text-light"
@@ -49,6 +49,10 @@ const ProfileBanner = () => {
                 <i className="bi bi-envelope"></i>
               </a>
             </div>
+
+            <a href="#contato" className="btn btn-contato">
+              Fale comigo
+            </a>
           </div>
         </div>
       </div>

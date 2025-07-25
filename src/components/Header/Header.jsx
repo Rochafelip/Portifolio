@@ -5,6 +5,17 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
+  const scrollToSection = (id) => {
+    const section = document.querySelector(id);
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center', // centraliza verticalmente
+      });
+      setMenuOpen(false); // fecha o menu mobile se estiver aberto
+    }
+  };
+
   return (
     <header className="custom-header">
       <div className="container">
@@ -21,11 +32,11 @@ const Header = () => {
           </button>
 
           <nav className={`nav-links ${menuOpen ? 'open' : ''}`}>
-            <a href="#sobre">Início</a>
-            <a href="#about-me">Sobre Mim</a>
-            <a href="#habilidades">Habilidades</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#contato">Contato</a>
+            <button onClick={() => scrollToSection('#sobre')}>Início</button>
+            <button onClick={() => scrollToSection('#about-me')}>Sobre Mim</button>
+            <button onClick={() => scrollToSection('#habilidades')}>Habilidades</button>
+            <button onClick={() => scrollToSection('#projetos')}>Projetos</button>
+            <button onClick={() => scrollToSection('#contato')}>Contato</button>
           </nav>
         </div>
       </div>

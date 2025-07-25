@@ -38,8 +38,8 @@ useEffect(() => {
         >
           {repos.map((repo) => (
             <SwiperSlide key={repo.id}>
-              <div className="project-card rounded shadow-sm p-4 d-flex flex-column justify-content-between h-100">
-                <div className="flex-grow-1">
+              <div className="project-card shadow-sm p-4 d-flex flex-column justify-content-between h-100">
+                <div className="d-flex flex-column h-100">
                   <div className="project-image mb-4">
                     <img
                       src={repo.image}
@@ -47,11 +47,13 @@ useEffect(() => {
                       className="img-fluid rounded"
                     />
                   </div>
-                  <h4 className="text-light">{repo.displayName}</h4>
-                  <p className="text-light small">
-                    {repo.description || 'Sem descrição.'}
-                  </p>
-                  <p className="text-light small">
+                  <div className="flex-grow-1">
+                    <h4 className="text-light">{repo.displayName}</h4>
+                    <p className="text-light medium">
+                      {repo.description || 'Sem descrição.'}
+                    </p>
+                  </div>
+                  <p className="text-light small mt-auto">
                     {repo.languages || 'Não definidas'}
                   </p>
                 </div>

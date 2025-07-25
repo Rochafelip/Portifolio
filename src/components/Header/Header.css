@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem;  
+  padding: 1rem 1rem;  
   position: relative;
 }
 
@@ -60,6 +60,21 @@
 .nav-links a:hover {
   color: #ddd;
 }
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.nav-links button:hover {
+  text-decoration: underline;
+}
+
 
 /* Responsivo */
 @media (max-width: 768px) {
