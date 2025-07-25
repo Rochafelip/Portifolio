@@ -27,7 +27,7 @@ Sou desenvolvedor Full Stack com foco em **Ruby on Rails** no backend e **React.
 
 ## 📁 Projetos em destaque
 
-Explore os projetos aqui no repositório ou pelo meu site [👉 Portifolio Felipe: ]([Portifolio](https://rochafelip.github.io/Portifolio/)]
+Explore os projetos aqui no repositório ou pelo meu site: [Portifolio](https://rochafelip.github.io/Portifolio/)
 Todos com código limpo, responsividade e boas práticas.
 
 ---
@@ -39,7 +39,7 @@ Quer conversar sobre tecnologia, projetos ou colaboração?
 - ✉️ Email: rocha.felipe98@gmail.com  
 - 💼 LinkedIn: [linkedin.com/in/feliperochafrs](https://www.linkedin.com/in/feliperochafrs/)  
 - 🧑‍💻 GitHub: [github.com/Rochafelip](https://github.com/Rochafelip)  
-- 📱 WhatsApp: [Clique para conversar](https://wa.me/SEUNUMEROAQUI)
+- 📱 WhatsApp: [Clique para conversar](https://wa.me/81997524801)
 
 ---
 
