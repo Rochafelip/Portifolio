@@ -59,7 +59,7 @@ useEffect(() => {
                 </div>
                 <div className="mb-0 d-flex justify-content-between align-items-center">
                   <a
-                    href={repo.html_url}
+                    href={repo.homepage || '#'}
                     target="_blank"
                     rel="noreferrer"
                     className="py-2 px-3 btn btn-sm btn-outline-light w-70"
