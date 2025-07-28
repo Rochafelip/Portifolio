@@ -26,14 +26,20 @@ export const fetchGitHubRepos = async (username = "Rochafelip", limit = 10) => {
       .filter(repo => !repo.fork && !excludedRepos.includes(repo.name))
       .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
 
-    const featuredRepoIndex = repos.findIndex(r => r.name === "landing-page-autoforce");
+    // Repos fixos
+    const fixedReposOrder = ["landing-page-autoforce", "warranty-manager"];
 
-    if (featuredRepoIndex !== -1) {
-      const [featuredRepo] = repos.splice(featuredRepoIndex, 1);
-      repos.unshift(featuredRepo);
-    }
+    const fixedRepos = [];
+    fixedReposOrder.forEach(name => {
+      const index = repos.findIndex(r => r.name === name);
+      if (index !== -1) {
+        fixedRepos.push(repos[index]);
+        repos.splice(index, 1);
+      }
+    });
 
-    repos = repos.slice(0, limit);
+    // Junta fixos + o restante até o limite
+    repos = [...fixedRepos, ...repos].slice(0, limit);
 
     const reposWithLang = await Promise.all(
       repos.map(async (repo) => {
