@@ -1,6 +1,7 @@
 import landingPageImg from "../assets/images/ProjectsImages/LandingPagesAutoForce.png";
 import placeHolderImg from "../assets/images/ProjectsImages/placeholder.png";
 import kartImg from "../assets/images/ProjectsImages/kart-img.png";
+import warrantyImg from "../assets/images/ProjectsImages/warrantymanager.png";
 
 const formatRepoName = (name) =>
   name
@@ -10,7 +11,8 @@ const formatRepoName = (name) =>
 const getRepoImage = (name) => {
   const images = {
     "landing-page-autoforce": landingPageImg,
-    "scheduling_system": kartImg
+    "scheduling_system": kartImg,
+    "warranty-manager": warrantyImg
   };
   return images[name] || placeHolderImg;
 };
