@@ -19,7 +19,14 @@ export const fetchGitHubRepos = async (username = "Rochafelip", limit = 10) => {
   const excludedRepos = ["Portifolio", "Rochafelip", "simulate-pit-stop", "warranty-manager-frontend"];
 
   try {
-    const response = await fetch(`https://api.github.com/users/${username}/repos`);
+    const token = "S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";
+
+    const response = await fetch(`https://api.github.com/users/${username}/repos`, {
+      headers: {
+        Authorization: `token ${token}`
+      }
+    });
+
     const data = await response.json();
 
     if (!Array.isArray(data)) throw new Error('Resposta inesperada da API do GitHub');
