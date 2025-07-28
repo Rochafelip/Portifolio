@@ -14,7 +14,7 @@ const getRepoImage = (name) => {
 };
 
 export const fetchGitHubRepos = async (username = "Rochafelip", limit = 10) => {
-  const excludedRepos = ["Portifolio", "Rochafelip", "simulate-pit-stop"];
+  const excludedRepos = ["Portifolio", "Rochafelip", "simulate-pit-stop", "warranty-manager-frontend"];
 
   try {
     const response = await fetch(`https://api.github.com/users/${username}/repos`);
