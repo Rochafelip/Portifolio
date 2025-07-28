@@ -3,7 +3,9 @@ import placeHolderImg from "../assets/images/ProjectsImages/placeholder.png";
 import kartImg from "../assets/images/ProjectsImages/kart-img.png";
 
 const formatRepoName = (name) =>
-  name.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  name
+    .replace(/[-_]/g, ' ')
+    .replace(/\b\w/g, (l) => l.toUpperCase());
 
 const getRepoImage = (name) => {
   const images = {
@@ -14,10 +16,11 @@ const getRepoImage = (name) => {
 };
 
 export const fetchGitHubRepos = async (username = "Rochafelip", limit = 10) => {
-  const excludedRepos = ["Portifolio", "Rochafelip", "simulate-pit-stop"];
+  const excludedRepos = ["Portifolio", "Rochafelip", "simulate-pit-stop", "warranty-manager-frontend"];
 
   try {
     const response = await fetch(`https://api.github.com/users/${username}/repos`);
+
     const data = await response.json();
 
     if (!Array.isArray(data)) throw new Error('Resposta inesperada da API do GitHub');
@@ -28,21 +31,7 @@ export const fetchGitHubRepos = async (username = "Rochafelip", limit = 10) => {
       .filter(repo =>
         !excludedRepos.includes(repo.name) &&
         (!repo.fork || fixedReposOrder.includes(repo.name))
-      )
-      .sort((a, b) => {
-        const indexA = fixedReposOrder.indexOf(a.name);
-        const indexB = fixedReposOrder.indexOf(b.name);
-
-        if (indexA !== -1 && indexB !== -1) {
-          return indexA - indexB; // ambos estão fixos, manter ordem fixa
-        } else if (indexA !== -1) {
-          return -1; // A é fixo, vem antes
-        } else if (indexB !== -1) {
-          return 1; // B é fixo, vem antes
-        } else {
-          return new Date(b.updated_at) - new Date(a.updated_at); // ordenar por data
-        }
-      });    
+      );  
 
     const fixedRepos = [];
     fixedReposOrder.forEach(name => {
@@ -53,8 +42,7 @@ export const fetchGitHubRepos = async (username = "Rochafelip", limit = 10) => {
       }
     });
 
-    // Junta fixos + o restante até o limite
-    repos = [...fixedRepos, ...repos].slice(0, limit);
+    repos = [...fixedRepos, ...repos.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))].slice(0, limit);
 
     const reposWithLang = await Promise.all(
       repos.map(async (repo) => {
