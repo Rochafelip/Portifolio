@@ -22,12 +22,27 @@ export const fetchGitHubRepos = async (username = "Rochafelip", limit = 10) => {
 
     if (!Array.isArray(data)) throw new Error('Resposta inesperada da API do GitHub');
 
-    let repos = data
-      .filter(repo => !repo.fork && !excludedRepos.includes(repo.name))
-      .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
-
-    // Repos fixos
     const fixedReposOrder = ["landing-page-autoforce", "warranty-manager"];
+
+    let repos = data
+      .filter(repo =>
+        !excludedRepos.includes(repo.name) &&
+        (!repo.fork || fixedReposOrder.includes(repo.name))
+      )
+      .sort((a, b) => {
+        const indexA = fixedReposOrder.indexOf(a.name);
+        const indexB = fixedReposOrder.indexOf(b.name);
+
+        if (indexA !== -1 && indexB !== -1) {
+          return indexA - indexB; // ambos estão fixos, manter ordem fixa
+        } else if (indexA !== -1) {
+          return -1; // A é fixo, vem antes
+        } else if (indexB !== -1) {
+          return 1; // B é fixo, vem antes
+        } else {
+          return new Date(b.updated_at) - new Date(a.updated_at); // ordenar por data
+        }
+      });    
 
     const fixedRepos = [];
     fixedReposOrder.forEach(name => {
