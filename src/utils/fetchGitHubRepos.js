@@ -52,7 +52,11 @@ export const fetchGitHubRepos = async (username = "Rochafelip", limit = 10) => {
 
     const reposWithLang = await Promise.all(
       repos.map(async (repo) => {
-        const langRes = await fetch(`https://api.github.com/repos/${username}/${repo.name}/languages`);
+        const langRes = await fetch(`https://api.github.com/repos/${username}/${repo.name}/languages`, {
+          headers: {
+            Authorization: `token ${token}`
+          }
+        });
         const languagesData = await langRes.json();
         const languages = Object.keys(languagesData).join(', ') || "Não definidas";
 
