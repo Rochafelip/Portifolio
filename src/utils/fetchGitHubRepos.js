@@ -3,7 +3,9 @@ import placeHolderImg from "../assets/images/ProjectsImages/placeholder.png";
 import kartImg from "../assets/images/ProjectsImages/kart-img.png";
 
 const formatRepoName = (name) =>
-  name.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  name
+    .replace(/[-_]/g, ' ')
+    .replace(/\b\w/g, (l) => l.toUpperCase());
 
 const getRepoImage = (name) => {
   const images = {
