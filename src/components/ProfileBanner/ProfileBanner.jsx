@@ -1,5 +1,5 @@
 import React from 'react';
-import fotoFelipe from '../../assets/images/PerfilImage/Perfil.jpg';
+import fotoFelipe from '../../assets/images/PerfilImage/Perfil3.jpg';
 import './ProfileBanner.css';
 
 const ProfileBanner = () => {
