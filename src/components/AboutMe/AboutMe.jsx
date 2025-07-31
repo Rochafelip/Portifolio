@@ -1,5 +1,5 @@
 import React from 'react';
-import fotoFelipe from '../../assets/images/aboutme1.jpg';
+import fotoFelipe from '../../assets/images/PerfilImage/2Perfil.jpg';
 import './AboutMe.css';
 
 const AboutMe = () => {

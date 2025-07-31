@@ -1,4 +1,5 @@
 import React from 'react';
+import fotoFelipe from '../../assets/images/PerfilImage/Perfil.jpg';
 import './ProfileBanner.css';
 
 const ProfileBanner = () => {
@@ -9,7 +10,7 @@ const ProfileBanner = () => {
           
           <div className="col-md-4 text-center mb-4 mb-md-0">
             <img
-              src="https://avatars.githubusercontent.com/u/174018410?v=4"
+              src={fotoFelipe}
               alt="Foto Felipe Rocha"
               className="img-fluid rounded-circle shadow"
               id="foto-perfil"
