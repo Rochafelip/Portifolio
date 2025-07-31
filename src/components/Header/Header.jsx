@@ -10,9 +10,9 @@ const Header = () => {
     if (section) {
       section.scrollIntoView({
         behavior: 'smooth',
-        block: 'center', // centraliza verticalmente
+        block: 'center', 
       });
-      setMenuOpen(false); // fecha o menu mobile se estiver aberto
+      setMenuOpen(false); 
     }
   };
 
