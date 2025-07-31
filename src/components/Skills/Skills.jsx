@@ -15,7 +15,8 @@ const backendSkills = [
   { name: 'Ruby on Rails', icon: 'devicon-rails-plain colored' },
   { name: 'Node.js', icon: 'devicon-nodejs-plain colored' },
   { name: 'Java', icon: 'devicon-java-plain colored' },
-  { name: 'Spring Boot', icon: 'devicon-spring-plain colored' },
+  { name: 'spring', icon: 'devicon-spring-plain colored' },
+  {name: 'PHP', icon: 'devicon-php-plain colored'}
 ];
 
 const devopsSkills = [
@@ -23,6 +24,9 @@ const devopsSkills = [
   { name: 'MySQL', icon: 'devicon-mysql-plain colored' },
   { name: 'Docker', icon: 'devicon-docker-plain colored' },
   { name: 'Git & GitHub', icon: 'devicon-git-plain colored' },
+  { name: 'Composer', icon: 'devicon-composer-line colored' },
+  { name: 'Redis', icon: 'devicon-redis-plain colored' },
+  { name: 'NGINX', icon: 'devicon-nginx-original colored' },
   { name: 'Postman', icon: 'bi-send' },
 ];
 
