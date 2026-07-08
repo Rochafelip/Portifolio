@@ -19,7 +19,7 @@ const ProfileBanner = () => {
 
           <div className="col-md-6 text-center text-md-start">
             <h2 className="typing">Olá, sou o Felipe Rocha</h2>
-            <p className="lead mb-3">Desenvolvedor Full Stack | Ruby on Rails & React</p>
+            <p className="lead mb-3">Desenvolvedor Full Stack | Java | Angular | Spring Boot</p>
 
             <div className="d-flex justify-content-center justify-content-md-start gap-3 mb-3">
               <a
