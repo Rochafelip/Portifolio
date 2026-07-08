@@ -1,8 +1,10 @@
 .about-me-section {
-  background-color: #1c1c1c;
+  background-color: var(--color-bg);
   min-height: 70vh;
   display: flex;
-  align-items: center;  
+  align-items: center;
+  border-bottom: 1px solid rgba(var(--color-accent-rgb), 0.25);
+  padding: 3rem 0;
 }
 
 .about-me-wrapper {
@@ -11,17 +13,16 @@
   margin: 0 auto;
   padding: 1rem;
   box-sizing: border-box;
-  border-radius: 15px;  
+  border-radius: var(--radius-lg);
 }
 
-.about-me-wrapper h2{
+.about-me-wrapper h2 {
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
-  color: #00fecb;
+  color: var(--color-accent);
 }
 
-/* NOVO: Container com colunas */
 .about-me-columns {
   display: flex;
   flex-wrap: wrap;
@@ -29,39 +30,58 @@
   justify-content: space-between;
 }
 
-/* Coluna esquerda - Experiência */
 .experience-block {
   flex: 1 1 45%;
-  background-color: #2b2b2b;
-  padding: 1rem;
-  padding-right: 1.5rem; /* um pouco mais para evitar corte do conteúdo */
-  border-radius: 15px;
-  color: #dee2e6;
-  max-height: 400px; /* você pode ajustar como quiser */
-  overflow-y: auto;
+  background-color: var(--color-surface);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  color: var(--color-text-muted);
 }
 
 .experience-block h3 {
-  color: #00fecb;
-  margin-bottom: 1rem;
-}
-
-.experience-item {
+  color: var(--color-accent);
   margin-bottom: 1.5rem;
 }
 
-.experience-item h5 {
-  margin-bottom: 0.3rem;
-  font-size: 1.1rem;
-  color: #a6dac9;
+.timeline {
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 2px solid rgba(var(--color-accent-rgb), 0.35);
 }
 
-.experience-item p {
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.55rem;
+  top: 0.35rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-surface);
+}
+
+.timeline-item h5 {
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+  color: var(--color-text);
+}
+
+.timeline-item p {
   font-size: 0.95rem;
   text-align: justify;
 }
 
-/* Coluna direita - Sobre + Formação */
 .about-details {
   flex: 1 1 45%;
   display: flex;
@@ -70,10 +90,10 @@
 }
 
 .about-me-text {
-  background-color: #2b2b2b;
-  padding: 1rem;
-  border-radius: 15px;
-  color: #dee2e6;
+  background-color: var(--color-surface);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  color: var(--color-text-muted);
   text-align: justify;
 }
 
@@ -82,20 +102,21 @@
 }
 
 .education-block {
-  background-color: #001919;
-  padding: 1rem;
-  border-radius: 15px;
-  color: #dee2e6;
+  background-color: var(--color-surface-alt);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  color: var(--color-text-muted);
 }
 
 .education-block h4 {
-  color: #00fecb;
+  color: var(--color-accent);
   margin-bottom: 0.5rem;
 }
 
 .education-block p {
   margin: 0;
   font-weight: 500;
+  color: var(--color-text);
 }
 
 @media (max-width: 768px) {
