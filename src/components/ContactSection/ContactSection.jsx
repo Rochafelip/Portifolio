@@ -14,7 +14,7 @@ const ContactSection = () => {
           <a
             href={cv}
             download
-            className="btn btn-light"
+            className="btn-primary"
           >
             Baixar Currículo
           </a>
