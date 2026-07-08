@@ -13,11 +13,19 @@ const AboutMe = () => {
 
             <div className="timeline">
               <div className="timeline-item">
+                <h5>Desenvolvedor Full Stack — EY</h5>
+                <p>
+                  Desenvolvimento full stack com Java no backend e Angular no frontend, atuando na construção de microsserviços e em melhorias de desempenho.
+                </p>
+                <small>Set 2025 – Atual</small>
+              </div>
+
+              <div className="timeline-item">
                 <h5>Desenvolvedor Full Stack Ruby — Projeto ESG</h5>
                 <p>
                   Construção de API RESTful com autenticação JWT, dashboards interativos e controle de indicadores GRI/ODS usando Rails e React.
                 </p>
-                <small>Maio 2025 – Atual</small>
+                <small>Maio 2025 – Set 2025</small>
               </div>
 
               <div className="timeline-item">
