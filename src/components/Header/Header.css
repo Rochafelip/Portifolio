@@ -2,27 +2,27 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1rem;  
+  padding: 1rem 1rem;
   position: relative;
 }
 
 .logo {
   margin: 0;
   font-weight: bold;
-  color: #a6dac9;
+  color: var(--color-accent);
   font-size: 1.40rem;
 }
 
 .menu-toggle {
   display: none;
   background: none;
-  border: none;  
+  border: none;
   cursor: pointer;
 }
 
 .custom-header {
   width: 100%;
-  background-color: #111;
+  background-color: var(--color-surface);
   position: fixed;
   top: 0;
   left: 0;
@@ -50,31 +50,35 @@
   gap: 1rem;
 }
 
-.nav-links a {
-  color: #a6dac9;
-  text-decoration: none;
-  padding: 0.25rem 0.5rem;
-  transition: color 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: #ddd;
-}
-
 .nav-links button {
   background: none;
   border: none;
-  color: inherit;
+  color: var(--color-text);
   font: inherit;
   cursor: pointer;
   padding: 0.5rem 1rem;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .nav-links button:hover {
-  text-decoration: underline;
+  color: var(--color-accent);
 }
 
+.nav-links button.active {
+  color: var(--color-accent);
+  position: relative;
+}
+
+.nav-links button.active::after {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: -2px;
+  height: 2px;
+  background-color: var(--color-accent);
+}
 
 /* Responsivo */
 @media (max-width: 768px) {
@@ -88,7 +92,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #111;
+    background-color: var(--color-surface);
     width: 100%;
     padding: 0.5rem 1rem;
   }
@@ -97,8 +101,12 @@
     display: flex;
   }
 
-  .nav-links a {
+  .nav-links button {
     padding: 0.75rem 0;
-    border-top: 1px solid #222;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav-links button.active::after {
+    display: none;
   }
 }

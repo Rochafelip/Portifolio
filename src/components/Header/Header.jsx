@@ -1,8 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Header.css';
+
+const NAV_ITEMS = [
+  { id: 'sobre', label: 'Início' },
+  { id: 'about-me', label: 'Sobre Mim' },
+  { id: 'habilidades', label: 'Habilidades' },
+  { id: 'projetos', label: 'Projetos' },
+  { id: 'contato', label: 'Contato' },
+];
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState(NAV_ITEMS[0].id);
+
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   const scrollToSection = (id) => {
@@ -10,11 +20,31 @@ const Header = () => {
     if (section) {
       section.scrollIntoView({
         behavior: 'smooth',
-        block: 'center', 
+        block: 'center',
       });
-      setMenuOpen(false); 
+      setMenuOpen(false);
     }
   };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: '-50% 0px -50% 0px' }
+    );
+
+    NAV_ITEMS.forEach((item) => {
+      const el = document.getElementById(item.id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header className="custom-header">
@@ -32,11 +62,15 @@ const Header = () => {
           </button>
 
           <nav className={`nav-links ${menuOpen ? 'open' : ''}`}>
-            <button onClick={() => scrollToSection('#sobre')}>Início</button>
-            <button onClick={() => scrollToSection('#about-me')}>Sobre Mim</button>
-            <button onClick={() => scrollToSection('#habilidades')}>Habilidades</button>
-            <button onClick={() => scrollToSection('#projetos')}>Projetos</button>
-            <button onClick={() => scrollToSection('#contato')}>Contato</button>
+            {NAV_ITEMS.map((item) => (
+              <button
+                key={item.id}
+                className={activeSection === item.id ? 'active' : ''}
+                onClick={() => scrollToSection(`#${item.id}`)}
+              >
+                {item.label}
+              </button>
+            ))}
           </nav>
         </div>
       </div>
