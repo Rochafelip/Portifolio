@@ -62,7 +62,7 @@ useEffect(() => {
                     href={repo.homepage || '#'}
                     target="_blank"
                     rel="noreferrer"
-                    className="py-2 px-3 btn btn-sm btn-outline-light w-70"
+                    className="btn-primary"
                   >
                     Ver Projeto
                   </a>
@@ -70,7 +70,7 @@ useEffect(() => {
                     href={repo.html_url}
                     target="_blank"
                     rel="noreferrer"
-                    className="py-2 px-3 btn btn-sm btn-outline-light w-70"
+                    className="btn-secondary"
                   >
                     Ver no GitHub
                   </a>
