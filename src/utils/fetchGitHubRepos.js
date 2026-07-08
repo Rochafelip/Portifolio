@@ -11,7 +11,7 @@ const formatRepoName = (name) =>
 const getRepoImage = (name) => {
   const images = {
     "landing-page-autoforce": landingPageImg,
-    "scheduling_system": kartImg,
+    "marcarKart_app": kartImg,
     "warranty-manager": warrantyImg
   };
   return images[name] || placeHolderImg;
@@ -27,7 +27,7 @@ export const fetchGitHubRepos = async (username = "Rochafelip", limit = 10) => {
 
     if (!Array.isArray(data)) throw new Error('Resposta inesperada da API do GitHub');
 
-    const fixedReposOrder = ["flowfuel-app", "landing-page-autoforce", "warranty-manager"];
+    const fixedReposOrder = ["flowfuel-app", "landing-page-autoforce", "warranty-manager", "marcarKart_app"];
 
     let repos = data
       .filter(repo =>
