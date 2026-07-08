@@ -1,7 +1,7 @@
 .footer-section {
-  background-color: #001919;
-  border-top: 1px solid #333;
-  color: #fff;
+  background-color: var(--color-surface);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--color-text);
   font-size: 1rem;
   text-align: center;
   min-height: 90px;
@@ -12,7 +12,7 @@
 }
 
 .footer-container {
-  max-width: 1200px;  
+  max-width: 1200px;
   padding: 0 1rem;
   display: flex;
   flex-direction: column;
@@ -22,17 +22,18 @@
 
 .footer-text {
   margin: 0;
+  color: var(--color-text-muted);
 }
 
 .footer-links a {
   margin: 0 0.5rem;
   text-decoration: none;
-  color: #fff;
+  color: var(--color-text);
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #ccc;
+  color: var(--color-accent);
 }
 
 @media (min-width: 600px) {
