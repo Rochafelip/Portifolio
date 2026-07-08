@@ -52,11 +52,12 @@ const ProfileBanner = () => {
             </div>
             <div>
             <button
-              className="btn btn-contato"
+              className="btn-primary"
               onClick={() => {
                 document.getElementById("contato")?.scrollIntoView({ behavior: "smooth" });
               }}
-            >Fale comigo              
+            >
+              Fale comigo
             </button>
             </div>
           </div>
