@@ -27,7 +27,7 @@ export const fetchGitHubRepos = async (username = "Rochafelip", limit = 10) => {
 
     if (!Array.isArray(data)) throw new Error('Resposta inesperada da API do GitHub');
 
-    const fixedReposOrder = ["landing-page-autoforce", "warranty-manager"];
+    const fixedReposOrder = ["flowfuel-app", "landing-page-autoforce", "warranty-manager"];
 
     let repos = data
       .filter(repo =>
