@@ -32,8 +32,9 @@ export const fetchGitHubRepos = async (username = "Rochafelip", limit = 10) => {
     let repos = data
       .filter(repo =>
         !excludedRepos.includes(repo.name) &&
-        (!repo.fork || fixedReposOrder.includes(repo.name))
-      );  
+        (!repo.fork || fixedReposOrder.includes(repo.name)) &&
+        repo.stargazers_count > 0
+      );
 
     const fixedRepos = [];
     fixedReposOrder.forEach(name => {
