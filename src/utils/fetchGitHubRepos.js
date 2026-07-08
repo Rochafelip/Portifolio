@@ -2,6 +2,7 @@ import landingPageImg from "../assets/images/ProjectsImages/LandingPagesAutoForc
 import placeHolderImg from "../assets/images/ProjectsImages/placeholder.png";
 import kartImg from "../assets/images/ProjectsImages/kart-img.png";
 import warrantyImg from "../assets/images/ProjectsImages/warrantymanager.png";
+import flowfuelImg from "../assets/images/ProjectsImages/flowfuelapp.png";
 
 const formatRepoName = (name) =>
   name
@@ -12,7 +13,8 @@ const getRepoImage = (name) => {
   const images = {
     "landing-page-autoforce": landingPageImg,
     "marcarKart_app": kartImg,
-    "warranty-manager": warrantyImg
+    "warranty-manager": warrantyImg,
+    "flowfuel-app": flowfuelImg
   };
   return images[name] || placeHolderImg;
 };
